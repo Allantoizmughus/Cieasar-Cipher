@@ -51,5 +51,17 @@ public class Ceasar {
        }
        return encoded.toUpperCase();
    }
+   public boolean isValidOutputText(){
+
+       char[] chars = Text.toCharArray();
+
+       for (char c : chars) {
+           if(!Character.isLetter(c) && c != ' ') {
+               return false;
+           }
+       }
+       return true;
+   }
 }
+
 
