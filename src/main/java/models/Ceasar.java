@@ -3,7 +3,7 @@ package models;
 public class Ceasar {
     private int mkey;
     private String mText;
-    public isEncoded(int key,String Text){
+    public void isEncoded(int key, String Text){
         mkey=key;
         mText=Text;
     }
