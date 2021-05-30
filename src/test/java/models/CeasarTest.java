@@ -12,4 +12,9 @@ class CeasarTest {
         Ceasar testCeasar=new Ceasar();
         assertEquals(true, testCeasar.isEncoded(""));
     }
+     @Test
+    public void isEncoded_cipherKey_int(){
+         Ceasar testCeasar=new Ceasar();
+         assertEquals(testCeasar.isEncoded(2, ""));
+     }
 }
