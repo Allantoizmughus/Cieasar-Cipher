@@ -19,4 +19,14 @@ public class Ceasar {
    public int getKey(){
         return key;
    }
+   public boolean isValidInputText(){
+       char[] chars = Text.toCharArray();
+
+       for (char c : chars) {
+           if(!Character.isLetter(c) && c != ' ') {
+               return false;
+           }
+       }
+       return true;
+   }
 }
