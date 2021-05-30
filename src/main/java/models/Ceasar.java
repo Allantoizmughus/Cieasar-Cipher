@@ -62,6 +62,33 @@ public class Ceasar {
        }
        return true;
    }
+   public String validDecoding(){
+
+       String decodedValue = "";
+       String encodedArray[] = Text.split("");
+       String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       for (int i = 0; i<encodedArray.length;i++)
+       {
+           if (Text.charAt(i) == ' ')
+           {
+               decodedValue += " ";
+           }
+           else
+           {
+               int charPosition = alphabet.indexOf(Text.charAt(i));
+               int keyVal = (charPosition - key) % 26;
+
+               if (keyVal < 0)
+               {
+                   keyVal = alphabet.length() + keyVal;
+               }
+
+               char replaceValue = alphabet.charAt(keyVal);
+               decodedValue += replaceValue;
+           }
+       }
+       return decodedValue;
+   }
 }
 
 
