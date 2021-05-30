@@ -28,4 +28,9 @@ class CeasarTest {
          Ceasar testCeasar=new Ceasar();
          assertEquals(2,testCeasar.getKey());
      }
+     @Test
+    public void isEncoded_isValidInputText_String(){
+         Ceasar testCeasar=new Ceasar();
+         assertEquals(true,testCeasar.isValidInputText());
+     }
 }
