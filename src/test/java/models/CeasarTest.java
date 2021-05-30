@@ -43,4 +43,9 @@ class CeasarTest {
          Ceasar testCeasar=new Ceasar();
          assertEquals("",testCeasar.validEncoding());
      }
+     @Test
+    public void isEncoded_isValidOutputText_String(){
+         Ceasar testCeasar=new Ceasar();
+         assertEquals(true,testCeasar.isValidOutputText());
+     }
 }
