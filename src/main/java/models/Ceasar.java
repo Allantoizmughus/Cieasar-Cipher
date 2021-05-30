@@ -29,4 +29,7 @@ public class Ceasar {
        }
        return true;
    }
+   public boolean isValidKey(){
+       return key >1 && key < 26;
+   }
 }
