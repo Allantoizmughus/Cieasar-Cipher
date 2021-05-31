@@ -16,9 +16,6 @@ public class Ceasar {
         this.key=key;
         this.Text=Text;
     }
-//   public  boolean isEncoded(String Text){
-//       return true;
-//   }
     public boolean isNotEmpty(){
         return !Text.trim().isEmpty();
     }
@@ -42,23 +39,23 @@ public class Ceasar {
        return key >1 && key < 26;
    }
    public String validEncoding(){
-       String encoded = "";
+       StringBuilder encoded = new StringBuilder();
        String[] encodedArray = Text.split("");
        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        for (int i = 0; i<encodedArray.length;i++)
        {
            if (Text.charAt(i) == ' ')
            {
-               encoded += " ";
+               encoded.append(" ");
            }
            else
            {
                int charPosition = alphabet.indexOf(Text.charAt(i));
                int Key = (key + charPosition) % 26;
-               encoded += alphabet.charAt(key);
+               encoded.append(alphabet.charAt(key));
            }
        }
-       return encoded.toUpperCase();
+       return encoded.toString().toUpperCase();
    }
    public boolean isValidOutputText(){
 
@@ -73,14 +70,14 @@ public class Ceasar {
    }
    public String validDecoding(){
 
-       String decodedValue = "";
+       StringBuilder decodedValue = new StringBuilder();
        String[] encodedArray = Text.split("");
        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        for (int i = 0; i<encodedArray.length;i++)
        {
            if (Text.charAt(i) == ' ')
            {
-               decodedValue += " ";
+               decodedValue.append(" ");
            }
            else
            {
@@ -93,10 +90,10 @@ public class Ceasar {
                }
 
                char replaceValue = alphabet.charAt(keyVal);
-               decodedValue += replaceValue;
+               decodedValue.append(replaceValue);
            }
        }
-       return decodedValue;
+       return decodedValue.toString();
    }
 }
 
