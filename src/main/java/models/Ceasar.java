@@ -3,6 +3,11 @@ package models;
 public class Ceasar {
     private int key;
     private String Text;
+
+    public Ceasar(int key, String text) {
+
+    }
+
     public void isEncoded(int key, String Text){
         this.key=key;
         this.Text=Text;
