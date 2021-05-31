@@ -17,8 +17,8 @@ public class App {
           System.out.println("Enter a key");
           int key=scanner.nextInt();
           Ceasar encoding=new Ceasar( key,Text);
-          System.out.println(encoding.validEncoding());
-          //System.out.println(String.format("Your Encrypted text is:%s",encoding.validEncoding()));
+          //System.out.println(encoding.validEncoding());
+          System.out.println(String.format("Your Encrypted text is:%s",encoding.validEncoding()));
         }else if(selectedOption ==2){
             System.out.println("Enter the Encrypted Text");
             String Text=scanner.nextLine().toUpperCase();
