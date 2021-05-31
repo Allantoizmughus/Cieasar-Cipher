@@ -1,7 +1,5 @@
 package models;
 
-
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -49,7 +47,7 @@ class CeasarTest {
          assertEquals(true,testCeasar.isValidOutputText());
      }
      @Test
-    public void isEncoded_valiidDecoding(){
+    public void isEncoded_validDecoding(){
          Ceasar testCeasar=new Ceasar();
          assertEquals("", testCeasar.validDecoding());
      }

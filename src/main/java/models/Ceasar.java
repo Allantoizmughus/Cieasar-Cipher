@@ -4,7 +4,11 @@ public class Ceasar {
     private int key;
     private String Text;
 
-    public Ceasar(int key, String text) {
+    public Ceasar(int key, String Text) {
+
+    }
+
+    public Ceasar() {
 
     }
 
@@ -39,7 +43,7 @@ public class Ceasar {
    }
    public String validEncoding(){
        String encoded = "";
-       String encodedArray[] = Text.split("");
+       String[] encodedArray = Text.split("");
        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        for (int i = 0; i<encodedArray.length;i++)
        {
@@ -70,7 +74,7 @@ public class Ceasar {
    public String validDecoding(){
 
        String decodedValue = "";
-       String encodedArray[] = Text.split("");
+       String[] encodedArray = Text.split("");
        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        for (int i = 0; i<encodedArray.length;i++)
        {
