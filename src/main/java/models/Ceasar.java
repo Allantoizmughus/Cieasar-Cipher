@@ -19,12 +19,15 @@ public class Ceasar {
     public boolean isNotEmpty(){
         return !Text.trim().isEmpty();
     }
-    public String getText(){
-        return Text;
-    }
-   public int getKey(){
-        return key;
-   }
+
+//    public String getText(){
+//        return Text;
+//    }
+//
+//   public int getKey(){
+//        return key;
+//   }
+
    public boolean isValidInputText(){
        char[] chars = Text.toCharArray();
 
@@ -38,6 +41,7 @@ public class Ceasar {
    public boolean isValidKey(){
        return key >1 && key < 26;
    }
+
    public String validEncoding(){
        StringBuilder encoded = new StringBuilder();
        String[] encodedArray = Text.split("");
