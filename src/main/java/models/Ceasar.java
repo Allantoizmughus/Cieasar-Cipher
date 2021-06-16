@@ -5,24 +5,17 @@ public class Ceasar {
     private String Text;
 
     public Ceasar(int key, String Text) {
-
-    }
-
-    public Ceasar() {
-
-    }
-
-    public void isEncoded(int key, String Text){
         this.key=key;
         this.Text=Text;
     }
+
     public boolean isNotEmpty(){
         return !Text.trim().isEmpty();
     }
 
-//    public String getText(){
-//        return Text;
-//    }
+    public String getText(){
+        return Text;
+    }
 //
 //   public int getKey(){
 //        return key;
@@ -56,7 +49,7 @@ public class Ceasar {
            {
                int charPosition = alphabet.indexOf(Text.charAt(i));
                int Key = (key + charPosition) % 26;
-               encoded.append(alphabet.charAt(key));
+               encoded.append(alphabet.charAt(Key));
            }
        }
        return encoded.toString().toUpperCase();
